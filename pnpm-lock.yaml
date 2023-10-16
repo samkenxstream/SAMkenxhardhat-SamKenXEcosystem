@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 devDependencies:
   '@ethersproject/abi':
     specifier: ^5.7.0
@@ -596,6 +600,11 @@ packages:
       '@ethersproject/strings': 5.7.0
     dev: true
 
+  /@fastify/busboy@2.0.0:
+    resolution: {integrity: sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==}
+    engines: {node: '>=14'}
+    dev: true
+
   /@humanwhocodes/config-array@0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -1030,7 +1039,7 @@ packages:
       lodash: 4.17.21
       semver: 6.3.0
       table: 6.8.1
-      undici: 5.21.0
+      undici: 5.26.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1550,6 +1559,7 @@ packages:
   /amdefine@1.0.1:
     resolution: {integrity: sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==}
     engines: {node: '>=0.4.2'}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -1871,13 +1881,6 @@ packages:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-    dev: true
-
-  /busboy@1.6.0:
-    resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
-    engines: {node: '>=10.16.0'}
-    dependencies:
-      streamsearch: 1.1.0
     dev: true
 
   /bytes@3.1.2:
@@ -2472,6 +2475,7 @@ packages:
 
   /eslint-config-prettier@8.7.0(eslint@8.36.0):
     resolution: {integrity: sha512-HHVXLSlVUhMSmyW4ZzEuvjpwqamgmlfkutD53cYXLikh4pt/modINRcCIApJ84czDxM4GZInwUrromsDdTImTA==}
+    hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
@@ -3283,6 +3287,7 @@ packages:
   /hardhat@2.13.0(ts-node@10.9.1)(typescript@4.9.5):
     resolution: {integrity: sha512-ZlzBOLML1QGlm6JWyVAG8lVTEAoOaVm1in/RU2zoGAnYEoD1Rp4T+ZMvrLNhHaaeS9hfjJ1gJUBfiDr4cx+htQ==}
     engines: {node: '>=14.0.0'}
+    hasBin: true
     peerDependencies:
       ts-node: '*'
       typescript: '*'
@@ -3341,7 +3346,7 @@ packages:
       ts-node: 10.9.1(@types/node@18.15.1)(typescript@4.9.5)
       tsort: 0.0.1
       typescript: 4.9.5
-      undici: 5.21.0
+      undici: 5.26.3
       uuid: 8.3.2
       ws: 7.5.9
     transitivePeerDependencies:
@@ -5018,6 +5023,7 @@ packages:
 
   /solidity-coverage@0.8.2(hardhat@2.13.0):
     resolution: {integrity: sha512-cv2bWb7lOXPE9/SSleDO6czkFiMHgP4NXPj+iW9W7iEKLBk7Cj0AGBiNmGX3V1totl9wjPrT0gHmABZKZt65rQ==}
+    hasBin: true
     peerDependencies:
       hardhat: ^2.11.0
     dependencies:
@@ -5106,11 +5112,6 @@ packages:
   /stealthy-require@1.1.1:
     resolution: {integrity: sha512-ZnWpYnYugiOVEY5GkcuJK1io5V8QmNYChG62gSit9pQVGErXtrKuPC55ITaVSukmMta5qpMU7vqLt2Lnni4f/g==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /streamsearch@1.1.0:
-    resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
-    engines: {node: '>=10.0.0'}
     dev: true
 
   /string-format@2.0.0:
@@ -5389,6 +5390,7 @@ packages:
 
   /ts-node@10.9.1(@types/node@18.15.1)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
+    hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
       '@swc/wasm': '>=1.2.50'
@@ -5489,6 +5491,7 @@ packages:
 
   /typechain@8.1.1(typescript@4.9.5):
     resolution: {integrity: sha512-uF/sUvnXTOVF2FHKhQYnxHk4su4JjZR8vr4mA2mBaRwHTbwh0jIlqARz9XJr1tA0l7afJGvEa1dTSi4zt039LQ==}
+    hasBin: true
     peerDependencies:
       typescript: '>=4.3.0'
     dependencies:
@@ -5552,11 +5555,11 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici@5.21.0:
-    resolution: {integrity: sha512-HOjK8l6a57b2ZGXOcUsI5NLfoTrfmbOl90ixJDl0AEFG4wgHNDQxtZy15/ZQp7HhjkpaGlp/eneMgtsu1dIlUA==}
-    engines: {node: '>=12.18'}
+  /undici@5.26.3:
+    resolution: {integrity: sha512-H7n2zmKEWgOllKkIUkLvFmsJQj062lSm3uA4EYApG8gLuiOM0/go9bIoC3HVaSnfg4xunowDE2i9p8drkXuvDw==}
+    engines: {node: '>=14.0'}
     dependencies:
-      busboy: 1.6.0
+      '@fastify/busboy': 2.0.0
     dev: true
 
   /universalify@0.1.2:
